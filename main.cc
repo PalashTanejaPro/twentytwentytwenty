@@ -13,7 +13,7 @@ void beep(){
 	}
 }
 int main(int argc, char **argv){
-	if (argc != 2 || argc != 1){
+	if (argc > 2){
 		std::cout<<"Usage eyeprotecc [debug]";
 		return 1;
 	}
@@ -21,7 +21,7 @@ int main(int argc, char **argv){
 	std::cout<<"Starting timer.. \n";
 	int sleep_time;
 
-	if(argc==2 && !strncmp("debug", argv[1])){	
+	if(argc==2 && !strcmp("debug", argv[1])){	
 		sleep_time = 1;		
 	}
 	sleep_time = 20;
